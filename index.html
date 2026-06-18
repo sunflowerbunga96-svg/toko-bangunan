@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Toko Bangunan Rakasia</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f4f8;
+      color: #1a2332;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem;
+    }
+
+    /* ===== HEADER SUPER PROFESIONAL ===== */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0d1f3c 100%);
+      padding: 0.8rem 2.5rem;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255,215,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 1;
+    }
+
+    .logo-img {
+      width: 65px;
+      height: 65px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #0a1628;
+      box-shadow: 0 4px 15px rgba(250,204,21,0.4);
+      font-family: 'Montserrat', sans-serif;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #facc15, #e6b800);
+    }
+
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #facc15;
+      text-shadow: 0 2px 10px rgba(250,204,21,0.3);
+    }
+
+    .logo-text .brand span {
+      color: white;
+      font-weight: 300;
+    }
+
+    .logo-text .tagline {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+
+    .header-contact .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      background: rgba(255,255,255,0.06);
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .header-contact .info-item i {
+      color: #facc15;
+      font-size: 0.9rem;
+    }
+
+    .wa-btn-header {
+      background: linear-gradient(135deg, #25D366, #1da851);
+      color: white;
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      border: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .wa-btn-header:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 24px;
+      padding: 3rem 3rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid rgba(255,215,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-text {
+      max-width: 550px;
+      z-index: 1;
+    }
+
+    .hero-text .badge {
+      display: inline-block;
+      background: #facc15;
+      color: #0a1628;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #0a1628;
+      line-height: 1.15;
+    }
+
+    .hero-text h2 .highlight {
+      color: #facc15;
+      position: relative;
+    }
+
+    .hero-text h2 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: rgba(250,204,21,0.25);
+      border-radius: 4px;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #4a5568;
+      margin: 1.2rem 0 2rem;
+      max-width: 450px;
+    }
+
+    .hero-text .btn-cta {
+      background: linear-gradient(135deg, #0a1628, #1a2a4a);
+      border: none;
+      color: white;
+      padding: 1rem 2.8rem;
+      border-radius: 60px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: 0 8px 30px rgba(10,22,40,0.3);
+      transition: 0.3s;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-text .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(10,22,40,0.4);
+    }
+
+    .hero-text .btn-cta i {
+      color: #facc15;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .hero-stats .stat {
+      text-align: center;
+    }
+
+    .hero-stats .stat .number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0a1628;
+    }
+
+    .hero-stats .stat .number i {
+      color: #facc15;
+      font-size: 1.4rem;
+    }
+
+    .hero-stats .stat .label {
+      font-size: 0.75rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-image {
+      font-size: 5rem;
+      color: #0a1628;
+      background: rgba(250,204,21,0.08);
+      padding: 1.5rem 2.5rem;
+      border-radius: 100px;
+      display: flex;
+      gap: 1.5rem;
+      z-index: 1;
+      border: 2px dashed rgba(250,204,21,0.2);
+    }
+
+    .hero-image i {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .hero-image i:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    /* ===== KATEGORI BAR ===== */
+    .kategori-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      background: white;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      justify-content: center;
+      border: 1px solid #e8edf4;
+    }
+
+    .kategori-bar span {
+      font-weight: 700;
+      color: #0a1628;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .kategori-bar span i {
+      color: #facc15;
+    }
+
+    .kategori-bar a {
+      color: #4a5568;
+      text-decoration: none;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .kategori-bar a:hover {
+      background: #0a1628;
+      color: white;
+      border-color: #0a1628;
+    }
+
+    .kategori-bar a.active {
+      background: #facc15;
+      color: #0a1628;
+      border-color: #facc15;
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0a1628;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-title i {
+      color: #facc15;
+      font-size: 1.8rem;
+    }
+
+    .section-title .line {
+      flex: 1;
+      height: 3px;
+      background: linear-gradient(to right, #facc15, transparent);
+      border-radius: 4px;
+    }
+
+    /* ===== PRODUK GRID ===== */
+    .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    .produk-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #edf2f7;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .produk-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(10,22,40,0.12);
+      border-color: #facc15;
+    }
+
+    .card-image {
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+      padding: 2rem 1rem 1.5rem;
+      text-align: center;
+      font-size: 4rem;
+      color: #1a2a4a;
+      border-bottom: 1px solid #edf2f7;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .card-image .badge-stok {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 0.6rem;
+      background: #48bb78;
+      color: white;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card-image .badge-stok.habis {
+      background: #fc8181;
+    }
+
+    .card-body {
+      padding: 1.2rem 1.2rem 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body .kategori-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: #edf2f7;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+      width: fit-content;
+      color: #4a5568;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0a1628;
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .card-body .harga {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0a1628;
+      margin: 0.2rem 0 0.6rem;
+    }
+
+    .card-body .harga small {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-left: 0.3rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      border-top: 1px solid #edf2f7;
+      padding-top: 0.8rem;
+    }
+
+    .card-footer .stok {
+      font-size: 0.75rem;
+      color: #48bb78;
+      background: #f0fff4;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    .card-footer .stok.habis {
+      color: #fc8181;
+      background: #fff5f5;
+    }
+
+    .btn-pesan {
+      background: linear-gradient(135deg, #25D366, #1da851);
+      border: none;
+      color: white;
+      padding: 0.45rem 1.3rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.25);
+    }
+
+    .btn-pesan:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+    }
+
+    .btn-pesan i {
+      font-size: 0.9rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 4rem;
+      background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 2.5rem;
+      border-radius: 24px;
+      text-align: center;
+      border: 1px solid rgba(255,215,0,0.08);
+    }
+
+    .footer .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #facc15;
+      letter-spacing: -0.5px;
+    }
+
+    .footer .footer-brand span {
+      color: white;
+      font-weight: 300;
+    }
+
+    .footer p {
+      max-width: 500px;
+      margin: 0.5rem auto 1.5rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    .footer .footer-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .footer .footer-info span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer .footer-info i {
+      color: #facc15;
+    }
+
+    .footer .footer-wa {
+      background: linear-gradient(135deg, #25D366, #1da851);
+      color: white;
+      padding: 0.7rem 2.5rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+
+    .footer .footer-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+    }
+
+    .footer .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      opacity: 0.4;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+      .hero-image {
+        font-size: 3.5rem;
+        padding: 1rem 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        padding: 1.2rem 1.5rem;
+        border-radius: 16px;
+      }
+      .header-contact {
+        justify-content: center;
+        gap: 0.6rem;
+      }
+      .header-contact .info-item {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+      }
+      .logo-text .brand {
+        font-size: 1.4rem;
+      }
+      .logo-img {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .hero-text h2 {
+        font-size: 1.8rem;
+      }
+      .hero-text p {
+        margin: 0.8rem auto 1.5rem;
+        max-width: 100%;
+      }
+      .hero-stats {
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .hero-image {
+        margin-top: 1.5rem;
+        font-size: 2.8rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .kategori-bar {
+        border-radius: 30px;
+        padding: 0.6rem 1rem;
+        gap: 0.3rem 0.6rem;
+      }
+      .kategori-bar a {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+      .produk-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .card-image {
+        font-size: 3rem;
+        min-height: 100px;
+        padding: 1.2rem 0.5rem;
+      }
+      .card-body h3 {
+        font-size: 0.95rem;
+      }
+      .card-body .harga {
+        font-size: 1.2rem;
+      }
+      .btn-pesan {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.9rem;
+      }
+      .footer {
+        padding: 2rem 1.2rem;
+      }
+      .footer .footer-info {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0.8rem;
+      }
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+      .produk-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .card-body {
+        padding: 0.8rem;
+      }
+      .card-image {
+        font-size: 2.4rem;
+        min-height: 80px;
+        padding: 0.8rem 0.3rem;
+      }
+      .card-body .harga {
+        font-size: 1rem;
+      }
+      .card-body h3 {
+        font-size: 0.8rem;
+      }
+      .card-footer .stok {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.5rem;
+      }
+      .btn-pesan {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+        gap: 0.3rem;
+      }
+      .btn-pesan i {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="logo-area">
+        <div class="logo-img">
+          <!-- LOGO GAMBAR bangunan.jpg -->
+          <img src="bangunan.jpg" alt="Toko Bangunan Rakasia">
+        </div>
+        <div class="logo-text">
+          <div class="brand">TOKO BANGUNAN <span>RAKASIA</span></div>
+          <div class="tagline"><i class="fas fa-certificate"></i> Terpercaya Sejak 2010</div>
+        </div>
+      </div>
+      <div class="header-contact">
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i> 0857-6866-0524
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock"></i> 08.00 - 17.00
+        </div>
+        <a href="#" class="wa-btn-header" id="headerWaBtn">
+          <i class="fab fa-whatsapp"></i> Hubungi WA
+        </a>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="badge"><i class="fas fa-star"></i> Toko Bangunan No.1</div>
+        <h2>Bangun <span class="highlight">Impian</span> Anda <br>Bersama Kami</h2>
+        <p>Menyediakan berbagai macam bahan bangunan berkualitas dengan harga terbaik. Pesan online dan langsung terhubung via WhatsApp.</p>
+        <a href="#" class="btn-cta" id="heroCtaBtn">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="number"><i class="fas fa-building"></i> 500+</div>
+            <div class="label">Produk Tersedia</div>
+          </div>
+          <div class="stat">
+            <div class="number"><i class="fas fa-users"></i> 1.200+</div>
+            <div class="label">Pelanggan Puas</div>
+          </div>
+          <div class="stat">
+            <div class="number"><i class="fas fa-trophy"></i> 4.8</div>
+            <div class="label">Rating Pelanggan</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-hard-hat"></i>
+        <i class="fas fa-tools"></i>
+        <i class="fas fa-cubes"></i>
+      </div>
+    </section>
+
+    <!-- ===== KATEGORI ===== -->
+    <div class="kategori-bar">
+      <span><i class="fas fa-th-list"></i> Kategori:</span>
+      <a href="#" class="active">#Semua</a>
+      <a href="#">Semen</a>
+      <a href="#">Bata</a>
+      <a href="#">Cat</a>
+      <a href="#">Pipa</a>
+      <a href="#">Besi</a>
+      <a href="#">Keramik</a>
+      <a href="#">Alat</a>
+      <a href="#">Kayu</a>
+      <a href="#">Listrik</a>
+    </div>
+
+    <!-- ===== PRODUK ===== -->
+    <div class="section-title">
+      <i class="fas fa-boxes"></i> Katalog Produk
+      <span class="line"></span>
+    </div>
+
+    <div class="produk-grid" id="produkGrid">
+
+      <!-- SEMEN -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-box"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-layer-group"></i> Semen</span>
+          <h3>Semen Tiga Roda 50 kg</h3>
+          <div class="harga">Rp 62.500 <small>/sak</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Semen Tiga Roda 50 kg - Rp 62.500"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-box-open"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-layer-group"></i> Semen</span>
+          <h3>Semen Gresik 40 kg</h3>
+          <div class="harga">Rp 58.000 <small>/sak</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Semen Gresik 40 kg - Rp 58.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-cube"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-layer-group"></i> Semen</span>
+          <h3>Semen Holcim 50 kg</h3>
+          <div class="harga">Rp 65.000 <small>/sak</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Semen Holcim 50 kg - Rp 65.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BATA -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-brick"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-th-large"></i> Bata</span>
+          <h3>Bata Ringan 10 cm (1 m³)</h3>
+          <div class="harga">Rp 780.000 <small>/m³</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Bata Ringan 10 cm (1 m³) - Rp 780.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-th"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-th-large"></i> Bata</span>
+          <h3>Bata Ringan 7.5 cm (1 m³)</h3>
+          <div class="harga">Rp 720.000 <small>/m³</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Bata Ringan 7.5 cm (1 m³) - Rp 720.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-th-large"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-th-large"></i> Bata</span>
+          <h3>Bata Merah Kualitas A (1000 pcs)</h3>
+          <div class="harga">Rp 850.000 <small>/1000 pcs</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Bata Merah Kualitas A (1000 pcs) - Rp 850.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAT -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-paint-roller"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-fill-drip"></i> Cat</span>
+          <h3>Cat Tembok Dulux 5 kg</h3>
+          <div class="harga">Rp 185.000 <small>/pail</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Cat Tembok Dulux 5 kg - Rp 185.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-paint-bucket"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-fill-drip"></i> Cat</span>
+          <h3>Cat Kayu & Besi 1 kg</h3>
+          <div class="harga">Rp 95.000 <small>/kaleng</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Cat Kayu & Besi 1 kg - Rp 95.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIPA -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-pipe"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-pipe-valve"></i> Pipa</span>
+          <h3>Pipa PVC 4 inch (4 m)</h3>
+          <div class="harga">Rp 92.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Pipa PVC 4 inch (4 m) - Rp 92.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-plumbing"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-pipe-valve"></i> Pipa</span>
+          <h3>Pipa PVC 2 inch (4 m)</h3>
+          <div class="harga">Rp 48.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Pipa PVC 2 inch (4 m) - Rp 48.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BESI -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-weight-hanging"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-grip-vertical"></i> Besi</span>
+          <h3>Besi Beton 10 mm (12 m)</h3>
+          <div class="harga">Rp 137.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Besi Beton 10 mm (12 m) - Rp 137.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-grip-vertical"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-grip-vertical"></i> Besi</span>
+          <h3>Besi Beton 12 mm (12 m)</h3>
+          <div class="harga">Rp 198.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Besi Beton 12 mm (12 m) - Rp 198.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KERAMIK -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-border-all"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-th-large"></i> Keramik</span>
+          <h3>Keramik Lantai 40x40 (1 dus)</h3>
+          <div class="harga">Rp 118.000 <small>/dus</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Keramik Lantai 40x40 (1 dus) - Rp 118.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-square"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-th-large"></i> Keramik</span>
+          <h3>Keramik Lantai 60x60 (1 dus)</h3>
+          <div class="harga">Rp 185.000 <small>/dus</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Keramik Lantai 60x60 (1 dus) - Rp 185.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALAT -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-tools"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-tools"></i> Alat</span>
+          <h3>Mesin Gerinda 4" Makita</h3>
+          <div class="harga">Rp 545.000 <small>/unit</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Mesin Gerinda 4 Makita - Rp 545.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-drill"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-tools"></i> Alat</span>
+          <h3>Bor Listrik 13 mm</h3>
+          <div class="harga">Rp 425.000 <small>/unit</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Bor Listrik 13 mm - Rp 425.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAYU -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-tree"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-wood"></i> Kayu</span>
+          <h3>Kayu Balok 6x12 (4 m)</h3>
+          <div class="harga">Rp 135.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Kayu Balok 6x12 (4 m) - Rp 135.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-wood"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-wood"></i> Kayu</span>
+          <h3>Kayu Papan 2x20 (4 m)</h3>
+          <div class="harga">Rp 92.000 <small>/batang</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Kayu Papan 2x20 (4 m) - Rp 92.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LISTRIK -->
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-bolt"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-plug"></i> Listrik</span>
+          <h3>Kabel NYY 2x1.5 mm (50 m)</h3>
+          <div class="harga">Rp 185.000 <small>/roll</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Kabel NYY 2x1.5 mm (50 m) - Rp 185.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produk-card">
+        <div class="card-image">
+          <i class="fas fa-plug"></i>
+          <span class="badge-stok">Ready</span>
+        </div>
+        <div class="card-body">
+          <span class="kategori-label"><i class="fas fa-plug"></i> Listrik</span>
+          <h3>Stop Kontak 4 lubang</h3>
+          <div class="harga">Rp 45.000 <small>/unit</small></div>
+          <div class="card-footer">
+            <span class="stok"><i class="fas fa-check-circle"></i> Tersedia</span>
+            <a href="#" class="btn-pesan pesan-wa" data-produk="Stop Kontak 4 lubang - Rp 45.000"><i class="fab fa-whatsapp"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-brand">TOKO BANGUNAN <span>RAKASIA</span></div>
+      <p>Melayani kebutuhan bangunan Anda dengan produk berkualitas dan harga terbaik. Kepuasan pelanggan adalah prioritas kami.</p>
+      <div class="footer-info">
+        <span><i class="fas fa-phone-alt"></i> 0857-6866-0524</span>
+        <span><i class="fas fa-map-marker-alt"></i> Jl. Raya Bangunan No. 88</span>
+        <span><i class="fas fa-envelope"></i> info@rakasiabangunan.com</span>
+      </div>
+      <a href="#" class="footer-wa" id="footerWaBtn"><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</a>
+      <div class="copyright">© 2026 Toko Bangunan Rakasia. All Rights Reserved.</div>
+    </footer>
+
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function() {
+      const WA_NUMBER = '6285768660524';
+      const WA_MESSAGE = 'Halo%20Toko%20Bangunan%20Rakasia%2C%20saya%20ingin%20pesan%20produk%3A%20';
+
+      function bukaWA(produk) {
+        let pesan = WA_MESSAGE;
+        if (produk) {
+          pesan += encodeURIComponent(produk);
+        } else {
+          pesan += 'saya%20butuh%20informasi%20produk%20bangunan.';
+        }
+        const url = `https://wa.me/${WA_NUMBER}?text=${pesan}`;
+        window.open(url, '_blank');
+      }
+
+      document.querySelectorAll('.pesan-wa').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const produk = this.getAttribute('data-produk') || '';
+          bukaWA(produk);
+        });
+      });
+
+      document.getElementById('heroCtaBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        bukaWA('');
+      });
+
+      document.getElementById('headerWaBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        bukaWA('');
+      });
+
+      document.getElementById('footerWaBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        bukaWA('');
+      });
+
+    })();
+  </script>
+</body>
+</html>
